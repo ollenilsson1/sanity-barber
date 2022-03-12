@@ -3,21 +3,30 @@ import React from 'react'
 
 function Header() {
   return (
-    <header className='flex justify-between p-5 max-w-7xl mx-auto'>
-      <div className='flex items-center space-x-5'>
+    <header className="mx-auto flex max-w-7xl justify-between p-5">
+      <div className="flex items-center space-x-5">
         <Link href="/">
-          {/* create a barber icon instead of dummy medium icon */}
-          <img className='w-44 object-contain cursor-pointer' src="https://miro.medium.com/max/8978/1*s986xIGqhfsN8U--09_AdA.png" alt="" />
+          <img
+            className="w-44 cursor-pointer object-contain"
+            src="/images/logos/barberSthlmIcon.png"
+            alt=""
+          />
         </Link>
-        <div className='hidden md:inline-flex items-center space-x-5'>
-            <h3>Services</h3>
+        <div className="hidden items-center space-x-5 md:inline-flex">
+          <h3>Services</h3>
+          <Link href="/about">
             <h3>About</h3>
-            <h3 className='text-white bg-green-600 px-4 py-1 rounded-full'>Contact</h3>
+          </Link>
+          <h3 className="rounded-full bg-green-600 px-4 py-1 text-white">
+            Contact
+          </h3>
         </div>
       </div>
-      <div className='flex items-center space-x-5 text-green-600'>
-          <h3>Sign In</h3>
-          <h3 className='border px-4 py-1 rounded-full border-green-600'>Get Started</h3>
+      <div className="flex items-center space-x-5 text-green-600">
+        <h3>Sign In</h3>
+        <h3 className="rounded-full border border-green-600 px-4 py-1">
+          Get Started
+        </h3>
       </div>
     </header>
   )

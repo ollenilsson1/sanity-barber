@@ -100,11 +100,11 @@ function Post({ post }: Props) {
         </div>
       </article>
 
-      <hr className="my-5 mx-auto max-w-lg border border-yellow-500" />
+      <hr className="my-5 mx-auto max-w-lg border border-green-600" />
 
       {/* Using react-hook-form */}
       {submitted ? (
-        <div className="my-10 mx-auto flex max-w-2xl flex-col bg-yellow-500 p-10 text-white">
+        <div className="my-10 mx-auto flex max-w-2xl flex-col bg-green-600 p-10 text-white">
           <h3 className="text-3xl font-bold">
             Thank you for submitting your comment!
           </h3>
@@ -115,7 +115,7 @@ function Post({ post }: Props) {
           onSubmit={handleSubmit(onSubmit)}
           className="mx-auto mb-10 flex max-w-2xl flex-col p-5"
         >
-          <h3 className="text-sm text-yellow-500">Enjoyed this article?</h3>
+          <h3 className="text-sm text-green-600">Enjoyed this article?</h3>
           <h4 className="text-3xl font-bold">Leave a comment below!</h4>
           <hr className="mt-2 py-3" />
 
@@ -171,21 +171,21 @@ function Post({ post }: Props) {
           </div>
 
           <input
-            className="focus:shadow-outline cursor-pointer rounded bg-yellow-500 py-2 px-4 font-bold text-white shadow hover:bg-yellow-400 focus:outline-none"
+            className="focus:shadow-outline cursor-pointer rounded bg-green-600 py-2 px-4 font-bold text-white shadow hover:bg-green-500 focus:outline-none"
             type="submit"
           />
         </form>
       )}
 
       {/* Comments */}
-      <div className="my-10 mx-auto flex max-w-2xl flex-col space-y-2 p-10 shadow shadow-yellow-500">
+      <div className="my-10 mx-auto flex max-w-2xl flex-col space-y-2 p-10 shadow shadow-green-600">
         <h3 className="text-4xl">Comments</h3>
         <hr className="pb-2" />
 
         {post.comments.map((comment) => (
           <div key={comment._id}>
             <p>
-              <span className="text-yellow-500">{comment.name}: </span>
+              <span className="text-green-600">{comment.name}: </span>
               {comment.comment}
             </p>
           </div>
@@ -221,7 +221,7 @@ export const getStaticPaths = async () => {
 }
 /* Lägg $slug istället för my-second-post */
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const query = `*[_type == "post" && slug.current == "my-second-post"][0]{
+  const query = `*[_type == "post" && slug.current == $slug][0]{
     _id,
     _createdAt,
     title,
