@@ -31,8 +31,8 @@ export default function Home({ posts }: Props) {
         </div>
         <div>
           <img
-            className="hidden h-32 md:inline-flex lg:h-full"
-            src="https://accountabilitylab.org/wp-content/uploads/2020/03/Medium-logo.png"
+            className="hidden h-32 md:inline-flex lg:h-full "
+            src="/images/logos/barberSthlmSmallIcon.png"
             alt=""
           />
         </div>
