@@ -47,7 +47,7 @@ function About({ authors }: Props) {
 }
 
 export default About
-
+/* Lägga till länk till insta o.s.v i Sanity */
 export const getServerSideProps = async () => {
   const query = `*[_type == "author" ]{
         _id,
