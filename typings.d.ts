@@ -19,6 +19,20 @@ export interface Post {
   body: [object]
 }
 
+export interface Author {
+  _id: string
+  bio: [object]
+  image: {
+    asset: {
+      url: string
+    }
+  }
+  name: string
+  slug: {
+    current: string
+  }
+}
+
 export interface Comment {
   approved: boolean
   comment: string
